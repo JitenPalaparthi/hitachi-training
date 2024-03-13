@@ -23,3 +23,6 @@ func main() {
 	http.ListenAndServe(":50090", nil)
 
 }
+
+// If the exit code is 0 , it means it is successful
+// if the exit code is non 0 , it means the process has failed

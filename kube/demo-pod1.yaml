@@ -1,0 +1,21 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: demo1
+  namespace: jiten
+  labels:
+    name: demoapp1
+spec:
+  containers:
+  - name: myapp #name of a container
+    image: nginx
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+      requests: 
+        memory: "64Mi"
+        cpu: "200m"
+    ports:
+      - containerPort: 8080
+    hostPort: 8081

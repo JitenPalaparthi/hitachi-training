@@ -9,6 +9,18 @@
 
 ```
 
+- Start minikube with multiple nodes
+
+  ```
+  minikube start --nodes 2
+  ```
+
+- Add a node to the existing  cluster
+
+  ```
+  minikube node add 
+  ```
+
 - This directory :~/.minikube --> certificates, configs and profile 
 
 ```
@@ -25,7 +37,6 @@
 
 ```
   rm -f /tmp/juju-*
-
   sysctl fs.protected_regular=0
 ```
 
@@ -39,6 +50,5 @@
 5- minikube dashboard : This does port forwarding to the local machine
 
 ```
-
   ssh -L 9094:localhost:35893 jiten@34.145.206.178 -p 23213
 ```

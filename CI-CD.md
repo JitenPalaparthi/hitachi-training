@@ -21,5 +21,3 @@ CI: Continuous integration
 - Automating the release process, the software can be delivered quickly to production at any point of time.
 - it ensures that very minimal manual intervention
 - Build,test, deploy and release (Subjective)
-
-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

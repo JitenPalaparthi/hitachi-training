@@ -23,3 +23,7 @@ install minikube-linux-amd64 /usr/local/bin/minikube
 4- Install kubectl 
 
     https://kubernetes.io/docs/tasks/tools/install-kubectl-linux/
+
+5- minikube dashboard : This does port forwarding to the local machine
+
+    ssh -L 9094:localhost:35893 jiten@34.145.206.178 -p 23213

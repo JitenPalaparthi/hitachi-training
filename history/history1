@@ -1,0 +1,260 @@
+    1  clear
+    2  cd ~
+    3  clear
+    4  ls
+    5  kuebectl get all -A
+    6  kubectl exit
+    7  exit
+    8  clear
+    9  sudo
+   10  clear
+   11  groups
+   12  ls
+   13  cat Dockerfile
+   14  clear
+   15  ls
+   16  cat Dockerfile1
+   17  clear
+   18  clear
+   19  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+   20  sudo install minikube-linux-amd64 /usr/local/bin/minikube
+   21  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+   22  cler
+   23  clear
+   24  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+   25  sudo curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
+   26  ls
+   27  cd minikube-linux-amd64 
+   28  cd /usr/local/bin/minikube 
+   29  cd /usr/local/bin/
+   30  ls
+   31  ls minikube/
+   32  sudo minikube/
+   33  sudo ls minikube/
+   34  ls -a
+   35  ls -la 
+   36  which minikube
+   37  ls -la
+   38  minikube start 
+   39  sudo minikube start
+   40  cd ..
+   41  cd bin/
+   42  ls
+   43  chmod 777 *
+   44  sudo chmod 777 *
+   45  minikube start 
+   46  sudo minikube start 
+   47  sudo minikube start --force 
+   48  docker ps
+   49  sudo systemctl enable kubelet.service
+   50  minikube logs --file=logs.txt
+   51  sudo minikube logs --file=logs.txt
+   52  su root
+   53  minikube delete --purge
+   54  sudo minikube delete --purge
+   55  cd ~
+   56  ls
+   57  ls -a
+   58  groups
+   59  cat /etc/passwd
+   60  clear
+   61  ls
+   62  minikube
+   63  minikube start --force 
+   64  mkdir .minikube
+   65  ls -a
+   66  cd ..
+   67  ls
+   68  cd jitesh/
+   69  ls
+   70  cd ..
+   71  ls -al
+   72  chmod 777 jitesh/*
+   73  sudo chmod 777 jitesh/*
+   74  ls -al
+   75  sudo chown jiten jitesh/
+   76  ls -al
+   77  sudo chown jiten:jiten jitesh/
+   78  sudo chown jiten:jitesh jitesh/
+   79  ls -al
+   80  docker 
+   81  docker images
+   82  cd jitesh/
+   83  minikube start --force
+   84  sudo su -
+   85  exit
+   86  bash
+   87  exit
+   88  bash
+   89  clear
+   90  kubectl get all -A
+   91  sudo kubectl get all -A
+   92  sudo kubectl get all -A
+   93  kubectl get all -A
+   94  clear
+   95  minikube status
+   96  minikube stop
+   97  minikube delete --purge
+   98  sudo minikube start --force
+   99  sudo sysctl fs.protected_regular=0
+  100  sudo minikube start --force
+  101  minikube delete --purge
+  102  docker rmi gcr.io/k8s-minikube/kicbase:v0.0.42
+  103  minikube delete --purge
+  104  sudo su -
+  105  cd ~
+  106  ls
+  107  pwd
+  108  clear
+  109  sudo minikube start --force
+  110  sudo sysctl fs.protected_regular=0
+  111  sudo minikube start --force
+  112  sudo rm -rf /tmp/juju-mkb814c315fe9b7fabb439d6d58c5448fbb7853c
+  113  sudo minikube start --force
+  114  rm -rf /tmp/juju-mke11f63b5835bf422927bf558fccac7a21a838f
+  115  sudo minikube stop
+  116  sudo sysctl fs.protected_regular=0
+  117  sudo minikube delete --purge
+  118  sudo sysctl fs.protected_regular=0
+  119  sudo minikube start --force
+  120  minikube delete --purge
+  121  sudo su -
+  122  clear
+  123  ls
+  124  mkdir workspace
+  125  cd workspace/k
+  126  cd workspace/
+  127  git clone https://github.com/JitenPalaparthi/hitachi-training.git
+  128  ls
+  129  clear
+  130  cd hitachi-training/
+  131  cd kube/
+  132  ls
+  133  touch demo-nginx-replicationcontroller.yaml
+  134  vim demo-nginx-replicationcontroller.yaml 
+  135  vim demo-nginx-replicationcontroller.yaml 
+  136  vim demo-nginx-replicationcontroller.yaml 
+  137  vim demo-nginx-replicationcontroller.yaml 
+  138  kubectl get all -n dev
+  139  sudo kubectl get all -n dev
+  140  kubectl edit replicationcontroller/nginx-rc -n dev
+  141  sudo kubectl edit replicationcontroller/nginx-rc -n dev
+  142  kubectl
+  143  kubectl scalle --help
+  144  kubectl scale --help
+  145  clear
+  146  sudo kubectl scale --replicas=50 replicationcontroller/nginx-rc -n dev
+  147  sudo kubectl scale --replicas=1 replicationcontroller/nginx-rc -n dev
+  148  sudo kubectl scale --replicas=1000 replicationcontroller/nginx-rc -n dev
+  149  kubectl edit replicationcontroller/nginx-rc -n dev
+  150  sudo kubectl edit replicationcontroller/nginx-rc -n dev
+  151  sudo kubectl get pods -n dev --field-selector=status.phase=Pending
+  152  sudo kubectl get pods -n dev --field-selector=status.phase=Running
+  153  clear
+  154  sudo kubectl describe -n dev replicationcontroller/nginx-rc
+  155  sudo kubectl get nodes
+  156  kubectl describe node minikube
+  157  sudo kubectl describe node minikube
+  158  sudo kubectl describe -n dev pod/nginx-rc-299vr
+  159  kubectl edit replicationcontroller/nginx-rc -n dev
+  160  sudo kubectl edit replicationcontroller/nginx-rc -n dev
+  161  sudo kubectl get pods -n dev
+  162  clear
+  163  sudo kubectl delete replicationcontroller/nginx-rc -n dev
+  164  vim demo-nginx-replicationcontroller.yaml 
+  165  sudo kubectl apply -f demo-nginx-replicationcontroller.yaml 
+  166  sudo kubctl get pods -n dev -o wide
+  167  sudo kubectl get pods -n dev -o wide
+  168  vim demo-nginx-replicationcontroller.yaml 
+  169  sudo kubectl delete replicationController/nginx-rc -n dev
+  170  sudo kubectl apply -f demo-nginx-replicationcontroller.yaml 
+  171  vim demo-nginx-replicationcontroller.yaml 
+  172  sudo kubectl explain ReplicationController.Spec
+  173  sudo kubectl explain ReplicationController.spec
+  174  vim demo-nginx-replicationcontroller.yaml 
+  175  kubectl get all -n dev
+  176  sudo kubectl get all -n dev
+  177  clear
+  178  vim demo-nginx-replicationcontroller.yaml 
+  179  sudo kubectl apply -f demo-nginx-replicationcontroller.yaml 
+  180  clear
+  181  sudo kubectl get all -n dev -o wide
+  182  curl http://10.102.203.30:32000
+  183  sudo minikube ip
+  184  sudo 192.168.49.2:32000
+  185  sudo curl  192.168.49.2:32000
+  186  sudo curl  http://192.168.49.2:32000
+  187  sudo minikube services
+  188  sudo minikube service
+  189  sudo minikube service -all
+  190  sudo minikube service --all
+  191  sudo minikube
+  192  sudo minikube tunnel
+  193  sudo minikube node list
+  194  clear
+  195  sudo minikube node delete minikube-m03
+  196  sudo minikube node add  minikube-m03
+  197  sudo minikube ip
+  198  sudo minikube node list 
+  199  sudo curl http://192.168.49.2:32000
+  200  sudo minikube tunnel 
+  201  vim demo-nginx-replicationcontroller.yaml 
+  202  sudo kubectl apply -f demo-nginx-replicationcontroller.yaml 
+  203  sudo minikube tunnel 
+  204  vim demo-nginx-replicationcontroller.yaml 
+  205  sudo minikube tunnel 
+  206  vim demo-nginx-replicationcontroller.yaml 
+  207  sudo kubectl delete ns dev
+  208  sudo kubectl apply -f demo-nginx-replicationcontroller.yaml 
+  209  sudo kubectl create ns dev
+  210  sudo kubectl apply -f demo-nginx-replicationcontroller.yaml 
+  211  clear
+  212  sudo minikube service --all
+  213  sudo minikube tunnel
+  214  sudo minikube node list
+  215  sudo minikube node list
+  216  sudo kubectl describe pod/nginx-rs-7jffm -n dev
+  217  sudo kubectl delete ns dev
+  218  sudo kubectl get nodes
+  219  sudo kubectl label nodes minikube-m03 workload=dev colour=yellow
+  220  sudo kubectl label nodes minikube-m04 workload=dev colour=yellow
+  221* sudo kubectl label nodes minikube-m04 workload=de
+  222  sudo kubectl get nodes
+  223  sudo kubectl get nodes
+  224  sudo kubectl get nodes
+  225  sudo kubectl get nodes
+  226  sudo kubectl get nodes
+  227  sudo kubectl get nodes
+  228  sudo kubectl get nodes
+  229  sudo kubectl get nodes
+  230  sudo kubectl get nodes
+  231  sudo kubectl get nodes
+  232  sudo kubectl get nodes
+  233  sudo kubectl get nodes
+  234  watch sudo kubectl get nodes
+  235  watch sudo kubectl get nodes -o wide
+  236  sudo kubectl label nodes minikube-m08 workload=dev colour=yellow
+  237  sudo kubectl label nodes minikube-m09 workload=dev
+  238  clear
+  239  sudo minikube service --all -n dev
+  240  curl http://192.168.49.2:31209
+  241  git status
+  242  git add *
+  243  git commit -m "add replicationController replicaSet"
+  244  git config --global user.email "jpalaparthi@gmail.com"
+  245  git config --global user.name Jiten
+  246  git push origin main
+  247  export GITHUB_TOKEN=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
+  248  git push origin main
+  249  git remote add upstream https://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@github.com/JitenPalaparthi/hitachi-training.git
+  250  git push upstream main
+  251  git add *
+  252  git commit -m "add more examples"
+  253  git push upstream main
+  254  cd ..
+  255  history
+  256  history >history/history1
+  257  history >>history/history1
+  258  ls
+  259  mkdir history
+  260  history >>history/history1

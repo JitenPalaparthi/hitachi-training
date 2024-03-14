@@ -1,189 +1,447 @@
-    1  clear
-    2  cd ~
-    3  clear
-    4  ls
-    5  kuebectl get all -A
-    6  kubectl exit
-    7  exit
-    8  clear
-    9  sudo
-   10  clear
-   11  groups
-   12  ls
-   13  cat Dockerfile
-   14  clear
-   15  ls
-   16  cat Dockerfile1
-   17  clear
-   18  clear
-   19  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-   20  sudo install minikube-linux-amd64 /usr/local/bin/minikube
-   21  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-   22  cler
-   23  clear
-   24  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-   25  sudo curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64
-   26  ls
-   27  cd minikube-linux-amd64 
-   28  cd /usr/local/bin/minikube 
-   29  cd /usr/local/bin/
-   30  ls
-   31  ls minikube/
-   32  sudo minikube/
-   33  sudo ls minikube/
-   34  ls -a
-   35  ls -la 
-   36  which minikube
-   37  ls -la
-   38  minikube start 
-   39  sudo minikube start
-   40  cd ..
-   41  cd bin/
-   42  ls
-   43  chmod 777 *
-   44  sudo chmod 777 *
-   45  minikube start 
-   46  sudo minikube start 
-   47  sudo minikube start --force 
-   48  docker ps
-   49  sudo systemctl enable kubelet.service
-   50  minikube logs --file=logs.txt
-   51  sudo minikube logs --file=logs.txt
-   52  su root
-   53  minikube delete --purge
-   54  sudo minikube delete --purge
-   55  cd ~
-   56  ls
-   57  ls -a
-   58  groups
-   59  cat /etc/passwd
-   60  clear
-   61  ls
-   62  minikube
-   63  minikube start --force 
-   64  mkdir .minikube
-   65  ls -a
-   66  cd ..
-   67  ls
-   68  cd jitesh/
-   69  ls
-   70  cd ..
-   71  ls -al
-   72  chmod 777 jitesh/*
-   73  sudo chmod 777 jitesh/*
-   74  ls -al
-   75  sudo chown jiten jitesh/
-   76  ls -al
-   77  sudo chown jiten:jiten jitesh/
-   78  sudo chown jiten:jitesh jitesh/
-   79  ls -al
-   80  docker 
-   81  docker images
-   82  cd jitesh/
-   83  minikube start --force
-   84  sudo su -
-   85  exit
-   86  bash
-   87  exit
-   88  bash
-   89  clear
-   90  kubectl get all -A
-   91  sudo kubectl get all -A
-   92  sudo kubectl get all -A
-   93  kubectl get all -A
+    1  useradd jitesh
+    2  passwd jitesh
+    3  usermod -aG sudo jitesh
+    4  vim /etc/ssh/sshd_config
+    5  systemctl restart sshd
+    6  vim /etc/ssh/sshd_config
+    7  systemctl restart sshd
+    8  systemctl restart sshd
+    9  vim /etc/ssh/sshd_config
+   10  adduser jack
+   11  passwd jack
+   12  vim /etc/ssh/sshd_config
+   13  systemctl restart sshd
+   14  vim /etc/ssh/ssh_config
+   15  vim /etc/ssh/sshd_config
+   16  systemctl restart sshd
+   17  vim /etc/ssh/sshd_config
+   18  reboot
+   19  vim /etc/ssh/sshd_config
+   20  systemctl restart sshd
+   21  exit
+   22  vim /etc/ssh/sshd_config
+   23  vim /etc/sudoers
+   24  getenforce
+   25  systemctl restart ssh
+   26  vim /etc/ssh/sshd_config
+   27  vim /etc/ssh/sshd_config.d/60-cloudimg-settings.conf 
+   28  vim /etc/ssh/sshd_config.d/50-cloudimg-settings.conf 
+   29  systemctl restart sshd
+   30  usermod -d /home/jitesh jitesh
+   31  mkdir /home/jitesh
+   32  usermod -d /home/jitesh jitesh
+   33  su jitesh
+   34  usermod -aG sudo jack
+   35  clear
+   36  su jack
+   37  cd /tmp
+   38  ls
+   39  # Add Docker's official GPG key:
+   40  sudo apt-get update
+   41  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   42  clear
+   43  vim new.sh
+   44  sh new.sh
+   45  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   46  docker ls
+   47  docker ps -a
+   48  sudo docker run hello-world
+   49  docker images
+   50  apt install git -y
+   51  adduser uder1
+   52  userdel uder1
+   53  useradd user1
+   54  sudo adduser user1
+   55  passwd user1
+   56  passwd user2
+   57  vim user.sh
+   58  sh user.sh 
+   59  usermod -aG docker user{1..7}
+   60  usermod -aG docker user1
+   61  usermod -aG docker user2
+   62  usermod -aG docker user3
+   63  usermod -aG docker user4
+   64  usermod -aG docker user5
+   65  usermod -aG docker user6
+   66  usermod -aG docker user7
+   67  su user1
+   68  sudo usermod -l jiten jitesh
+   69  killall -u jitesh
+   70  sudo usermod -l jiten jitesh
+   71  kill -9 3963
+   72  usermod -l jiten jitesh
+   73  passwd jiten
+   74  cat /etc/passwd
+   75  adduser user8
+   76  exit
+   77  usermod -aG docker user8
+   78  cat /etc/group
+   79  systemctl enable docker
+   80  su user1
+   81  userdel user{1..8}
+   82  userdel user1
+   83  userdel user2
+   84  userdel user3
+   85  userdel user4
+   86  userdel user5
+   87  userdel user6
+   88  userdel user7
+   89  userdel user8
+   90  adduser sagarika.datta1@hitachids.com
+   91  adduser sagarika.datta1
+   92  adduser sagarika
+   93  usermod -aG docker sagarika
    94  clear
-   95  minikube status
-   96  minikube stop
-   97  minikube delete --purge
-   98  sudo minikube start --force
-   99  sudo sysctl fs.protected_regular=0
-  100  sudo minikube start --force
-  101  minikube delete --purge
-  102  docker rmi gcr.io/k8s-minikube/kicbase:v0.0.42
-  103  minikube delete --purge
-  104  sudo su -
-  105  cd ~
-  106  ls
-  107  pwd
+   95  free -h
+   96  cd /tmp
+   97  ls
+   98  vim user.sh
+   99  sh user.sh
+  100  vim user.sh
+  101  sh user.sh
+  102  id sushma
+  103  su jack
+  104  clear
+  105  sh user.sh
+  106  cat user.sh
+  107  ls
   108  clear
-  109  sudo minikube start --force
-  110  sudo sysctl fs.protected_regular=0
-  111  sudo minikube start --force
-  112  sudo rm -rf /tmp/juju-mkb814c315fe9b7fabb439d6d58c5448fbb7853c
-  113  sudo minikube start --force
-  114  rm -rf /tmp/juju-mke11f63b5835bf422927bf558fccac7a21a838f
-  115  sudo minikube stop
-  116  sudo sysctl fs.protected_regular=0
-  117  sudo minikube delete --purge
-  118  sudo sysctl fs.protected_regular=0
-  119  sudo minikube start --force
-  120  minikube delete --purge
-  121  sudo su -
-  122  sudo minikube ip
-  123  sudo minikube service --all
-  124  sudo curl 192.168.49.2:32000
-  125  sudo curl 192.168.49.1:32000
-  126  sudo curl 192.168.49.4:32000
-  127* sudo curl 192.168.49.4:
-  128  sudo minikube service --all
-  129  sudo curl http://192.168.49.2:32149
-  130  sudo minikube service --all -n dev
-  131  curl http://192.168.49.2:32149 
-  132  sudo curl http://192.168.49.2:32149 
-  133  clear
-  134  cd workspace/hitachi-training/kube/
-  135  clear
-  136  vim demo-nginx-replicationcontroller.yaml 
-  137  sudo kubectl delete rc nginx-rc -n dev
-  138  sudo kubectl delete service/nginx-service -n dev
-  139  sudo kubectl create -f demo-nginx-replicationcontroller.yaml 
-  140  sudo minikube service -all -n dev
-  141  sudo minikube service --all -n dev
-  142  curl http://192.168.49.2:31079
-  143  clear
-  144  cp demo-nginx-replicationcontroller.yaml demo-nginx-replicaset.yaml
-  145  vim demo-nginx-replicaset.yaml 
-  146  sudo kubectl apply -f demo-nginx-replicaset.yaml 
-  147  sudo kubectl api-resources
-  148  vim demo-nginx-replicaset.yaml 
-  149* 
-  150  vim demo-nginx-replicaset.yaml 
-  151  sudo kubectl apply -f demo-nginx-replicaset.yaml 
-  152  vim demo-nginx-replicaset.yaml 
-  153  sudo kubectl apply -f demo-nginx-replicaset.yaml 
-  154  vim demo-nginx-replicaset.yaml 
-  155  sudo kubectl apply -f demo-nginx-replicaset.yaml 
-  156  vim demo-nginx-replicaset.yaml 
-  157  sudo kubectl apply -f demo-nginx-replicaset.yaml 
-  158  clear
-  159  vim demo-nginx-replicaset.yaml 
-  160  sudo kubectl apply -f demo-nginx-replicaset.yaml 
-  161  vim demo-nginx-replicaset.yaml 
-  162  sudo kubectl apply -f demo-nginx-replicaset.yaml 
-  163  sudo kubectl create ns dev
-  164  sudo kubectl apply -f demo-nginx-replicaset.yaml 
-  165  sudo minikube node --help
-  166  sudo minikube node add --help
-  167  sudo kubectl explain ReplicaSet.spec
-  168  sudo kubectl explain ReplicaSet
-  169  sudo kubectl explain ReplicaSet.spec
-  170  sudo kubectl explain ReplicaSet.spec.nodeSelector
-  171  sudo kubectl explain Deployment.spec
-  172  clear
-  173  vim demo-nginx-replicaset.yaml 
-  174  sudo kubectl apply -f demo-nginx-replicaset.yaml 
-  175  vim demo-nginx-replicaset.yaml 
-  176  sudo minikube node add 
-  177  sudo minikube node list
-  178  sudo minikube node list
-  179  sudo minikube node add 
-  180  history
-  181  clear
-  182  vim demo-nginx-replicaset.yaml 
-  183  sudo kubectl apply -f demo-nginx-replicaset.yaml 
-  184  sudo kubectl apply -f demo-nginx-replicaset.yaml 
-  185  sudo kubectl create ns dev
-  186  sudo kubectl apply -f demo-nginx-replicaset.yaml 
-  187  vim demo-nginx-replicaset.yaml 
-  188  cd ..
-  189  history>>history/history2
+  109  vim /etc/sudoers
+  110  cat /etc/sudoers
+  111  usermod -aG admin sagarika sayantika drupad sushma kuddana aditya
+  112  sudhakar
+  113  rameshwari
+  114  gottipati
+  115  syed
+  116  gunasekaran
+  117  kathirvel
+  118  mohammed
+  119  ganesh
+  120  vemuri
+  121  robin
+  122  haritha
+  123  rakshith
+  124  sravan
+  125  ayushi
+  126  angamuthu
+  127  gundla
+  128  chandrasekhar
+  129  kaveti
+  130  ramamohan
+  131  usermod -aG admin sagarika sayantika drupad sushma kuddana
+  132  for user in sagarika sayantika drupad sushma kuddana aditya sudhakar rameshwari gottipati syed gunasekaran kathirvel mohammed ganesh vemuri robin haritha rakshith sravan ayushi angamuthu gundla chandrasekhar kaveti ramamohan; do sudo usermod -aG admin "$user"; done
+  133  cat /etc/sudoers
+  134  su kaveti
+  135  init 0
+  136  su - jithen
+  137  cat /etc/passwd| grep jit
+  138  su - jiten
+  139  usermod -aG docker jack
+  140  id jack
+  141  exit
+  142  su jiten
+  143  cat /etc/passwd
+  144  su rameshwari
+  145  exit
+  146  su aditya
+  147  su drupad
+  148  clear
+  149  docker ps
+  150  docker images
+  151  docker ps -a
+  152  clear
+  153  cd ~
+  154  vim kube.sh
+  155  sh +x kube.sh 
+  156  su jack && sh +x kube.sh 
+  157  su jiten
+  158  # List of usernames (replace with your actual usernames)
+  159  usernames=(jiten)
+  160  for username in "${usernames[@]}"; do
+  161      sudo mkhomedir_helper "$username"
+  162      sudo chmod 700 "/home/$username"
+  163      sudo chown "$username:$username" "/home/$username"     echo "Home directory for $username created and permissions set."; done
+  164  su jiten
+  165  chmod 777 /tmp/kube
+  166  su jiten
+  167  cd tmp
+  168  ls
+  169  chmod -R 777 /tmp/kube
+  170  su jiten
+  171  chmod -R 777 /home/jack
+  172  su jiten
+  173  echo "export KUBECONFIG=/tmp/kube/config" >> /etc/environment
+  174  cat /etc/passw
+  175  cat /etc/passwd
+  176  cat /etc/environment
+  177  su sudhakar
+  178  cd /tmp/kube
+  179  ls
+  180  ll
+  181  rm -rf config
+  182  ln -s /home/jack/.kube/config .
+  183  chmod -R 777 /tmp/kube
+  184  free -h
+  185  su jack
+  186  cp ~/kube.sh /home/jack
+  187  su jack
+  188  su jiten
+  189  cat /etc/passwd
+  190  vim new.sh
+  191  cat /etc/passwd | awk {print $1}
+  192  cat /etc/passwd | awk : {print $1}
+  193  cat /etc/passwd | awk : '{print $1}'
+  194  cat /etc/passwd | awk  '{print $1}'
+  195  cat /etc/passwd | awk  -F : '{print $1}'
+  196  # List of usernames (replace with your actual usernames)
+  197  usernames=(jiten sagarika sayantika drupad sushma kuddana aditya sudhakar rameshwari gottipati)
+  198  for username in "${usernames[@]}"; do
+  199      sudo mkhomedir_helper "$username"
+  200      sudo chmod 700 "/home/$username"
+  201      sudo chown "$username:$username" "/home/$username"     echo "Home directory for $username created and permissions set."; done
+  202  cd /home/
+  203  ll
+  204  su jack
+  205  init 6
+  206  su jiten
+  207  vim /etc/passwd
+  208  kubectl get all
+  209  uptime -p
+  210  cat /etc/passwd 
+  211  su gottipati
+  212  su aditya
+  213  exit
+  214  w
+  215  free -h
+  216  minikube get all
+  217  kubectl get all
+  218  su jack
+  219  su aditya
+  220  chmod -R 777 /home/jack
+  221  mkdir /kube
+  222  chmod -R 777 /kube/
+  223  ll
+  224  cd )kube
+  225  cd /kube
+  226  ll
+  227  vim /etc/envitonment
+  228  chmod -R 777 /home/jack
+  229  chmod -R /kube
+  230  chmod -R  777 /kube
+  231  w
+  232  init 0
+  233  minikube start --force
+  234  minikube start --driver=docker
+  235  sudo minikube delete
+  236  minikube delete --purge
+  237  minikube start --force
+  238  su jiten
+  239  exit
+  240  rm -rf .minikube/
+  241  minikube delete --purge
+  242  su jiten
+  243  minikube start --force
+  244  sysctl fs.protected_regular=0
+  245  minikube start --force
+  246  systemctl service minikube status
+  247  systemctl minikube service status
+  248  systemctl service  minikube status
+  249  ls
+  250  rm -rf /usr/local/bin/minikube 
+  251  minikube
+  252  clear
+  253  ls
+  254  install minikube-linux-amd64 /usr/local/bin/minikube
+  255  minikube start 
+  256  minikube start --force
+  257  clear
+  258  minikube delete --purge
+  259  minikube 
+  260  minikube status
+  261  minikube profiles list
+  262  minikube profile list
+  263  pwd
+  264  /usr/local/bin
+  265  cd /usr/local/bin
+  266  ls
+  267  rm -f minikube 
+  268  ls
+  269  cd ~
+  270  ls
+  271  install minikube-linux-amd64 /usr/local/bin/minikube
+  272  minikube start --froce 
+  273  minikube start --force 
+  274  sysctl fs.protected_regular=0
+  275  minikube start --force 
+  276  minikube start --nodes 2  --force 
+  277  minikube start --nodes 2  --driver=docker --force
+  278  sysctl fs.protected_regular=0
+  279  rm -f /tmp/juju-mke11f63b5835bf422927bf558fccac7a21a838f
+  280  rm -f /tmp/juju-*
+  281  minikube delete --purge
+  282  minikube start --nodes 2  --driver=docker --force
+  283  kubectl get all -A
+  284  kubectl get nodes
+  285  kubectl describe node minikube-m02
+  286  kubectl describe node minikube
+  287  kubectl get all -A
+  288  clear
+  289  kubectl get all -A
+  290  ls
+  291  mkdir workspace
+  292  cd workspace/
+  293  git clone https://github.com/JitenPalaparthi/hitachi-demo2.git
+  294  ls
+  295  cd hitachi-demo2/
+  296  clear
+  297  ls
+  298  mkdir kube
+  299  cd kube/
+  300  vim demo-namespace.yaml
+  301  kubectl apply -f demo-namespace.yaml 
+  302  cat demo-namespace.yaml 
+  303  kubectl get ns
+  304  vim demo-pod.yaml
+  305  kubectl apply -f demo-pod.yaml 
+  306  vim demo-pod.yaml
+  307  kubectl apply -f demo-pod.yaml 
+  308  vim demo-pod.yaml
+  309  clear
+  310  kubectl get pods -n dev
+  311  vim demo-pod.yaml
+  312  kubectl apply -f demo-pod.yaml 
+  313  kubectl get pods -n dev
+  314  kubectl describe munginx1 -n dev
+  315  kubectl describe mynginx1 -n dev
+  316  kubectl describe pod/mynginx1 -n dev
+  317  vim demo-pod.yaml
+  318  kubectl apply -f demo-pod.yaml 
+  319  vim demo-pod.yaml
+  320  kubectl apply -f demo-pod.yaml 
+  321  vim demo-pod.yaml
+  322  kubectl apply -f demo-pod.yaml 
+  323  kubectl get all -n dev
+  324  vim demo-pod.yaml 
+  325  kubectl apply -f demo-pod.yaml 
+  326  kubectl get all -n dev
+  327  kubectl delete pod pod/mynginx4 -n dev
+  328  kubectl delete  pod/mynginx4 -n dev
+  329  kubectl apply -f demo-pod.yaml 
+  330  kubectl get all -n dev
+  331  vim demo-pod.yaml 
+  332  kubectl get all -n dev
+  333  kubectl apply -f demo-pod.yaml 
+  334  vim demo-pod.yaml 
+  335  kubectl apply -f demo-pod.yaml 
+  336  kubectl get all -n dev
+  337  vim demo-pod.yaml 
+  338  kubectl apply -f demo-pod.yaml 
+  339  kubectl get all -n dev
+  340  kubectl describe pod/mynginx5 -n dev
+  341  kubectl get pods -A
+  342  kubectl descrie pod  mynginx6 -n dev
+  343  kubectl describe pod  mynginx6 -n dev
+  344  kubectl describe pod/mynginx6 -n dev
+  345  kubectl logs pod/mynginx6 -n dev
+  346  kubectl describe pod/mynginx6 -n dev
+  347  kubectl delete pod/mynginx6 -n dev
+  348  vim demo-pod.yaml 
+  349  kubectl apply -f demo-pod.yaml 
+  350  kubectl get all -n dev
+  351  kubectl delete pod/mynginx5 -n dev
+  352  vim demo-pod.yaml 
+  353  kubectl apply -f demo-pod.yaml 
+  354  kubectl get all -n dev
+  355  kubectl describe pod mynginx7 -n dev
+  356  minikube nodes
+  357  minikube node
+  358  minikube
+  359  minikube node list
+  360  minikube ssh 192.168.49.3
+  361  minikube ssh root@192.168.49.3
+  362  minikube ssh 
+  363  kubectl get all -n dev
+  364  kubetl describe pod/mynginx7 -n dev
+  365  kubectl describe pod/mynginx7 -n dev
+  366  docker pull nginx1234
+  367  docker login
+  368  docker pull nginx1234
+  369  clear
+  370  kubectl get nodes
+  371  kubectl describe node minikube-m02
+  372  minikube dashboard
+  373  clear
+  374  minikube start --force --driver=docker
+  375  sysctl fs.protected_regular=0
+  376  minikube delete --purge
+  377  rm -rf  /tmp/juju-*
+  378  minikube start --force --driver=docker
+  379  clear
+  380  ls
+  381  c /home/jitesh/
+  382  cd /home/jitesh/
+  383  ls
+  384  cd workspace/
+  385  cd hitachi-training/kube/
+  386  kubectl create ns dev
+  387  kubectl apply -f demo-nginx-replicationcontroller.yaml 
+  388  kubectl get all -n dev
+  389  watch kubectl get all -n dev
+  390  minikube add node
+  391  minikube 
+  392  minikube node add 
+  393  watch kubectl get all -n dev
+  394  minikube node add 
+  395  kubectl get nodes
+  396  minikube node add 
+  397  kubectl get nodes
+  398  minikube service -all
+  399  minikube service --all
+  400  curl 192.168.49.2:32000
+  401  curl http://192.168.49.2:32000
+  402  clear
+  403  sudo minikube delete node
+  404  sudo minikube node delete
+  405  sudo minikube node delete minikube-m04
+  406  sudo minikube node delete minikube-m03
+  407  sudo minikube node delete minikube-m01
+  408  sudo minikube node delete minikube-m02
+  409  clear
+  410  sudo minikube node list
+  411  sudo kubectl get all -n dev
+  412  sudo kubectl get all -n dev -o wide
+  413  minikube node add 
+  414  sudo kubectl get all -n dev -o wide
+  415  kubectl scale --replicas=2 replicationcontroler/nginx-rc -n dev
+  416  kubectl scale --replicas=2 replicationcontroller/nginx-rc -n dev
+  417  sudo kubectl get all -n dev -o wide
+  418  watch kubectl get all -n dev -o wide
+  419  kubectl scale --replicas=20 replicationcontroller/nginx-rc -n dev
+  420  watch kubectl get all -n dev -o wide
+  421  kubectl delete ns -n dev
+  422  kubectl delete ns dev
+  423  kubectl create ns dev
+  424  clear
+  425  watch kubectl get all -n dev -o wide
+  426  kubectl create ns dev
+  427  kubectl delete ns dev
+  428  kubectl create ns dev
+  429  watch kubectl get all -n dev -o wide
+  430  minikube node add 
+  431  sysctl fs.protected_regular=0
+  432  minikube node add 
+  433  rm -rf /tmp/juju-*
+  434  sysctl fs.protected_regular=0
+  435  minikube node add 
+  436  minikube nodelist
+  437  minikube node list
+  438  watch kubectl get all -n dev -o wide
+  439  kubectl delete ns dev
+  440  kubectl create ns dev
+  441  clear
+  442  watch kubectl get all -n dev -o wide
+  443  kubectl delete ns dev
+  444  minikube node add 
+  445  watch kubectl get all -n dev -o wide
+  446  cd ..
+  447  history>>history/history3

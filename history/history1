@@ -119,142 +119,71 @@
   119  sudo minikube start --force
   120  minikube delete --purge
   121  sudo su -
-  122  clear
-  123  ls
-  124  mkdir workspace
-  125  cd workspace/k
-  126  cd workspace/
-  127  git clone https://github.com/JitenPalaparthi/hitachi-training.git
-  128  ls
-  129  clear
-  130  cd hitachi-training/
-  131  cd kube/
-  132  ls
-  133  touch demo-nginx-replicationcontroller.yaml
-  134  vim demo-nginx-replicationcontroller.yaml 
-  135  vim demo-nginx-replicationcontroller.yaml 
+  122  sudo minikube ip
+  123  sudo minikube service --all
+  124  sudo curl 192.168.49.2:32000
+  125  sudo curl 192.168.49.1:32000
+  126  sudo curl 192.168.49.4:32000
+  127* sudo curl 192.168.49.4:
+  128  sudo minikube service --all
+  129  sudo curl http://192.168.49.2:32149
+  130  sudo minikube service --all -n dev
+  131  curl http://192.168.49.2:32149 
+  132  sudo curl http://192.168.49.2:32149 
+  133  clear
+  134  cd workspace/hitachi-training/kube/
+  135  clear
   136  vim demo-nginx-replicationcontroller.yaml 
-  137  vim demo-nginx-replicationcontroller.yaml 
-  138  kubectl get all -n dev
-  139  sudo kubectl get all -n dev
-  140  kubectl edit replicationcontroller/nginx-rc -n dev
-  141  sudo kubectl edit replicationcontroller/nginx-rc -n dev
-  142  kubectl
-  143  kubectl scalle --help
-  144  kubectl scale --help
-  145  clear
-  146  sudo kubectl scale --replicas=50 replicationcontroller/nginx-rc -n dev
-  147  sudo kubectl scale --replicas=1 replicationcontroller/nginx-rc -n dev
-  148  sudo kubectl scale --replicas=1000 replicationcontroller/nginx-rc -n dev
-  149  kubectl edit replicationcontroller/nginx-rc -n dev
-  150  sudo kubectl edit replicationcontroller/nginx-rc -n dev
-  151  sudo kubectl get pods -n dev --field-selector=status.phase=Pending
-  152  sudo kubectl get pods -n dev --field-selector=status.phase=Running
-  153  clear
-  154  sudo kubectl describe -n dev replicationcontroller/nginx-rc
-  155  sudo kubectl get nodes
-  156  kubectl describe node minikube
-  157  sudo kubectl describe node minikube
-  158  sudo kubectl describe -n dev pod/nginx-rc-299vr
-  159  kubectl edit replicationcontroller/nginx-rc -n dev
-  160  sudo kubectl edit replicationcontroller/nginx-rc -n dev
-  161  sudo kubectl get pods -n dev
-  162  clear
-  163  sudo kubectl delete replicationcontroller/nginx-rc -n dev
-  164  vim demo-nginx-replicationcontroller.yaml 
-  165  sudo kubectl apply -f demo-nginx-replicationcontroller.yaml 
-  166  sudo kubctl get pods -n dev -o wide
-  167  sudo kubectl get pods -n dev -o wide
-  168  vim demo-nginx-replicationcontroller.yaml 
-  169  sudo kubectl delete replicationController/nginx-rc -n dev
-  170  sudo kubectl apply -f demo-nginx-replicationcontroller.yaml 
-  171  vim demo-nginx-replicationcontroller.yaml 
-  172  sudo kubectl explain ReplicationController.Spec
-  173  sudo kubectl explain ReplicationController.spec
-  174  vim demo-nginx-replicationcontroller.yaml 
-  175  kubectl get all -n dev
-  176  sudo kubectl get all -n dev
-  177  clear
-  178  vim demo-nginx-replicationcontroller.yaml 
-  179  sudo kubectl apply -f demo-nginx-replicationcontroller.yaml 
-  180  clear
-  181  sudo kubectl get all -n dev -o wide
-  182  curl http://10.102.203.30:32000
-  183  sudo minikube ip
-  184  sudo 192.168.49.2:32000
-  185  sudo curl  192.168.49.2:32000
-  186  sudo curl  http://192.168.49.2:32000
-  187  sudo minikube services
-  188  sudo minikube service
-  189  sudo minikube service -all
-  190  sudo minikube service --all
-  191  sudo minikube
-  192  sudo minikube tunnel
-  193  sudo minikube node list
-  194  clear
-  195  sudo minikube node delete minikube-m03
-  196  sudo minikube node add  minikube-m03
-  197  sudo minikube ip
-  198  sudo minikube node list 
-  199  sudo curl http://192.168.49.2:32000
-  200  sudo minikube tunnel 
-  201  vim demo-nginx-replicationcontroller.yaml 
-  202  sudo kubectl apply -f demo-nginx-replicationcontroller.yaml 
-  203  sudo minikube tunnel 
-  204  vim demo-nginx-replicationcontroller.yaml 
-  205  sudo minikube tunnel 
-  206  vim demo-nginx-replicationcontroller.yaml 
-  207  sudo kubectl delete ns dev
-  208  sudo kubectl apply -f demo-nginx-replicationcontroller.yaml 
-  209  sudo kubectl create ns dev
-  210  sudo kubectl apply -f demo-nginx-replicationcontroller.yaml 
-  211  clear
-  212  sudo minikube service --all
-  213  sudo minikube tunnel
-  214  sudo minikube node list
-  215  sudo minikube node list
-  216  sudo kubectl describe pod/nginx-rs-7jffm -n dev
-  217  sudo kubectl delete ns dev
-  218  sudo kubectl get nodes
-  219  sudo kubectl label nodes minikube-m03 workload=dev colour=yellow
-  220  sudo kubectl label nodes minikube-m04 workload=dev colour=yellow
-  221* sudo kubectl label nodes minikube-m04 workload=de
-  222  sudo kubectl get nodes
-  223  sudo kubectl get nodes
-  224  sudo kubectl get nodes
-  225  sudo kubectl get nodes
-  226  sudo kubectl get nodes
-  227  sudo kubectl get nodes
-  228  sudo kubectl get nodes
-  229  sudo kubectl get nodes
-  230  sudo kubectl get nodes
-  231  sudo kubectl get nodes
-  232  sudo kubectl get nodes
-  233  sudo kubectl get nodes
-  234  watch sudo kubectl get nodes
-  235  watch sudo kubectl get nodes -o wide
-  236  sudo kubectl label nodes minikube-m08 workload=dev colour=yellow
-  237  sudo kubectl label nodes minikube-m09 workload=dev
-  238  clear
-  239  sudo minikube service --all -n dev
-  240  curl http://192.168.49.2:31209
-  241  git status
-  242  git add *
-  243  git commit -m "add replicationController replicaSet"
-  244  git config --global user.email "jpalaparthi@gmail.com"
-  245  git config --global user.name Jiten
-  246  git push origin main
-  247  export GITHUB_TOKEN=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
-  248  git push origin main
-  249  git remote add upstream https://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@github.com/JitenPalaparthi/hitachi-training.git
-  250  git push upstream main
-  251  git add *
-  252  git commit -m "add more examples"
-  253  git push upstream main
-  254  cd ..
-  255  history
-  256  history >history/history1
-  257  history >>history/history1
-  258  ls
-  259  mkdir history
-  260  history >>history/history1
+  137  sudo kubectl delete rc nginx-rc -n dev
+  138  sudo kubectl delete service/nginx-service -n dev
+  139  sudo kubectl create -f demo-nginx-replicationcontroller.yaml 
+  140  sudo minikube service -all -n dev
+  141  sudo minikube service --all -n dev
+  142  curl http://192.168.49.2:31079
+  143  clear
+  144  cp demo-nginx-replicationcontroller.yaml demo-nginx-replicaset.yaml
+  145  vim demo-nginx-replicaset.yaml 
+  146  sudo kubectl apply -f demo-nginx-replicaset.yaml 
+  147  sudo kubectl api-resources
+  148  vim demo-nginx-replicaset.yaml 
+  149* 
+  150  vim demo-nginx-replicaset.yaml 
+  151  sudo kubectl apply -f demo-nginx-replicaset.yaml 
+  152  vim demo-nginx-replicaset.yaml 
+  153  sudo kubectl apply -f demo-nginx-replicaset.yaml 
+  154  vim demo-nginx-replicaset.yaml 
+  155  sudo kubectl apply -f demo-nginx-replicaset.yaml 
+  156  vim demo-nginx-replicaset.yaml 
+  157  sudo kubectl apply -f demo-nginx-replicaset.yaml 
+  158  clear
+  159  vim demo-nginx-replicaset.yaml 
+  160  sudo kubectl apply -f demo-nginx-replicaset.yaml 
+  161  vim demo-nginx-replicaset.yaml 
+  162  sudo kubectl apply -f demo-nginx-replicaset.yaml 
+  163  sudo kubectl create ns dev
+  164  sudo kubectl apply -f demo-nginx-replicaset.yaml 
+  165  sudo minikube node --help
+  166  sudo minikube node add --help
+  167  sudo kubectl explain ReplicaSet.spec
+  168  sudo kubectl explain ReplicaSet
+  169  sudo kubectl explain ReplicaSet.spec
+  170  sudo kubectl explain ReplicaSet.spec.nodeSelector
+  171  sudo kubectl explain Deployment.spec
+  172  clear
+  173  vim demo-nginx-replicaset.yaml 
+  174  sudo kubectl apply -f demo-nginx-replicaset.yaml 
+  175  vim demo-nginx-replicaset.yaml 
+  176  sudo minikube node add 
+  177  sudo minikube node list
+  178  sudo minikube node list
+  179  sudo minikube node add 
+  180  history
+  181  clear
+  182  vim demo-nginx-replicaset.yaml 
+  183  sudo kubectl apply -f demo-nginx-replicaset.yaml 
+  184  sudo kubectl apply -f demo-nginx-replicaset.yaml 
+  185  sudo kubectl create ns dev
+  186  sudo kubectl apply -f demo-nginx-replicaset.yaml 
+  187  vim demo-nginx-replicaset.yaml 
+  188  cd ..
+  189  history>>history/history2

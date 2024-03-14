@@ -1,0 +1,48 @@
+apiVersion: v1
+kind: ReplicationController
+metadata:
+  name: nginx-rc
+  namespace: dev
+  labels:
+    type: dev
+    app: nginx
+    myapp: mynginx
+spec:
+  replicas: 10 # replicationController, replicaSet,deployment
+  selector:
+    app: nginx
+  template:
+    metadata:
+      name: nginx
+      labels:
+        app: nginx
+    spec:
+      containers:
+        - name: nginx
+          image: nginx
+          imagePullPolicy: IfNotPresent
+          ports:
+            - containerPort: 80
+
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nginx-service
+  namespace: dev
+  labels:
+    app: nginx
+spec:
+  type: LoadBalancer # NodePort, LoadBalancer
+  selector:
+    app: nginx
+    type: dev
+    myapp: mynginx
+  ports:
+  - port: 80
+    targetPort: 80
+      #nodePort: 32000
+
+    
+
+

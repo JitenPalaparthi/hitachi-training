@@ -1,16 +1,16 @@
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
-  name:  mynginxservice
-  namespace: test
+  name: nginx-service
+  namespace: dev
+  labels:
+    app: nginx
 spec:
+  type: LoadBalancer # NodePort, LoadBalancer
   selector:
-   app: nginx
-  type: ClusterIP
+    app: nginx
   ports:
-  - name:  name-of-the-port
-    port:  80
-    targetPort:  80
-# ClusterIP: 
-# NodePort:
-# LoadBalancer: offering by cloud providers
+  - port: 80
+    targetPort: 80
+      #nodePort: 32000
+

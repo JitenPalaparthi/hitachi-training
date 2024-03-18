@@ -1,0 +1,57 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: uploadapp-deployment
+  namespace: dev
+  labels:
+    app: uploadapp
+spec:
+  replicas: 2 # replicationController, replicaSet,deployment
+  selector:
+    matchLabels:
+      app: uploadapp
+  template:
+    metadata:
+      labels:
+        app: uploadapp
+    spec:
+      containers:
+      - name: uploadapp
+        image: jpalaparthi/hitachi_upload_app:v02
+        ports:
+        - containerPort: 8081
+          name: web
+        volumeMounts:
+        - name: temp-storage
+          mountPath: /uploads # it gets mounted inside the path of teh container
+      volumes:
+        - name: temp-storage
+          hostPath:
+            path: /mnt/data
+            type: DirectoryOrCreate
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: uploadapp-service
+  namespace: dev
+  labels:
+    app: uploadapp
+spec:
+  type: LoadBalancer # NodePort, LoadBalancer
+  selector:
+    app: uploadapp
+  ports:
+  - port: 8081
+    targetPort: 8081
+      #nodePort: 32000
+
+
+    
+
+

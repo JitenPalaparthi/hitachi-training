@@ -16,7 +16,8 @@ kind: StatefulSet
 metadata:
   name: nginx-statefulset
   namespace: dev
-  app: nginx
+  labels:
+    app: nginx
 spec:
   selector:
     matchLabels:
@@ -41,6 +42,7 @@ spec:
   - metadata:
       name: www
     spec:
+      name: standard
       accessModes: [ "ReadWriteOnce" ] # only one node can read and write to the volume.
       resources:
         requests:

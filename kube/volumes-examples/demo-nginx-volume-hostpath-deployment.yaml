@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-rs
+  namespace: dev
+  labels:
+    app: nginx
+spec:
+  replicas: 2 # replicationController, replicaSet,deployment
+  selector:
+    matchLabels:
+      app: nginx
+  template:
+    metadata:
+      labels:
+        app: nginx
+    spec:
+      containers:
+      - name: ngnix
+        image: nginx
+        ports:
+        - containerPort: 80
+          name: web
+        volumeMounts:
+        - name: temp-storage
+          mountPath: /usr/share/nginx/html # it gets mounted inside the path of teh container
+      volumes:
+        # - name: www
+        #   persistentVolumeClaim:
+        #     claimName: nginx-pvc
+        - name: hostpath-storage
+          hostPath:
+            path: /mnt/data
+            type: DirectoryOrCreate
+        
+
+    
+
+

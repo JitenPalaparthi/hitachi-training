@@ -10,6 +10,7 @@ spec:
   ports:
   - port: 80
     targetPort: 80 
+    # only pursose is to use in the statefulset
 ---
 apiVersion: apps/v1
 kind: StatefulSet
@@ -21,7 +22,7 @@ spec:
     matchLabels:
       app: nginx
   serviceName: nginx-headless
-  replicas: 10
+  replicas: 2
   template:
     metadata:
       labels:
@@ -29,22 +30,17 @@ spec:
     spec:
       containers:
       - name: ngnix
-        image: nginx-headless
+        image: nginx
         ports:
         - containerPort: 80
           name: web
         volumeMounts:
         - name: www
           mountPath: /usr/share/nginx/html # the path inside the pod/container
-  volumeClaimTemplates:
-  - metadata:
-      name: www
-    spec:
-      name: nginx-pv
-      accessModes: [ "ReadWriteOnce" ] # only one node can read and write to the volume.
-      resources:
-        requests:
-          storage: 1Gi
+      volumes:
+        - name: www
+          persistentVolumeClaim:
+            claimName: nginx-pvc
   # CSI -> Container Storage Interface --> Minikube CSI
   # CNI -> Container Netwroking Interface -->Kube-Network
   # CRI -> Container Runtime Interface --> Docker Container Runtime

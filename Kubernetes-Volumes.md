@@ -25,3 +25,18 @@
 | Persistence           | Data does not persist across Pod restarts or deletions. | Data persists on the host's filesystem until explicitly removed. | Data persists across Pod restarts and deletions. |
 | Kubernetes Object     | Volume within Pod specification.       | Volume within Pod specification.          | Kubernetes resource independent of Pod specification. |
 | Example Use Cases     | Temporary file storage, sharing data between containers in a Pod. | Accessing configuration files or logs on the host. | Persistent storage for databases, file storage, etc. |
+
+
+
+
+| Feature                   | StorageClass                                | PersistentVolume                           | PersistentVolumeClaim (PVC)               |
+|---------------------------|---------------------------------------------|--------------------------------------------|-------------------------------------------|
+| Purpose                   | Defines storage properties and provisioners that dynamically provision storage as needed. | Represents a piece of networked storage in the cluster, provisioned by an administrator. | Requests a storage resource from a storage class to be dynamically provisioned. |
+| Management                | Managed by the cluster administrator or storage provider. | Managed by the cluster administrator.     | Created by users or applications to request storage from a StorageClass. |
+| Dynamic Provisioning      | Supports dynamic provisioning of storage resources based on StorageClass definitions. | Does not support dynamic provisioning; volumes must be manually provisioned. | Requests dynamic provisioning of storage resources from a StorageClass. |
+| Lifespan                  | Existence is tied to the lifecycle of the cluster. | Exists independently of Pods or applications. | Exists independently of Pods or applications. |
+| Resource Allocation       | Allocates storage resources dynamically based on StorageClass configuration. | Represents a pre-allocated storage resource with specific properties. | Claims a portion of the storage resource allocated by a PersistentVolume. |
+| Binding                   | Automatically binds to a PersistentVolume based on dynamic provisioning rules. | Manually binds to a PersistentVolume.     | Automatically binds to a PersistentVolume based on the matching criteria and availability. |
+| Access Control            | Supports access modes and other parameters defined in the StorageClass. | Access control can be defined at the PersistentVolume level. | Access control can be defined at the PersistentVolumeClaim level. |
+| Lifecycle Management      | Deleted when the associated storage class is deleted. | Persist beyond the lifecycle of Pods or applications. | Deleted when no longer needed by Pods or applications. |
+| Kubernetes Object         | StorageClass                                | PersistentVolume                           | PersistentVolumeClaim                    |

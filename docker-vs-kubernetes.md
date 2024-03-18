@@ -1,0 +1,14 @@
+| Feature              | Docker                                     | Kubernetes                                 |
+|----------------------|--------------------------------------------|--------------------------------------------|
+| Purpose              | Platform for building, shipping, and running containers. | Container orchestration platform for automating deployment, scaling, and management of containerized applications. |
+| Architecture         | Client-server architecture with a single Docker daemon managing images and containers. | Distributed architecture with multiple components such as kube-apiserver, kube-scheduler, kube-controller-manager, and kubelet. |
+| Container Management | Manages individual containers.             | Manages clusters of containers.            |
+| Container Orchestration | Does not provide native container orchestration features. | Provides advanced container orchestration capabilities, including scaling, load balancing, and service discovery. |
+| Scaling              | Scaling is manual, typically done by spawning additional containers using Docker commands or Docker Compose. | Supports automatic scaling of containerized applications based on defined rules and policies. |
+| High Availability    | Limited high availability features, primarily through Docker Swarm mode for clustering. | Offers built-in features for high availability and fault tolerance, such as automatic container rescheduling and rolling updates. |
+| Networking           | Basic networking capabilities with Docker networking (bridge, overlay, etc.) and Docker Swarm overlay networks. | Advanced networking features with built-in support for service discovery, load balancing, and network policies. |
+| Storage Management   | Supports volumes for persisting data within containers. | Provides advanced storage orchestration with support for dynamic provisioning, storage classes, and persistent volumes. |
+| Deployment           | Manual deployment using Docker commands or Docker Compose files. | Declarative deployment using YAML manifests or Helm charts, allowing for easier management and versioning of deployments. |
+| Resource Management  | Limited resource management capabilities, primarily CPU and memory limits per container. | Offers robust resource management with support for CPU and memory limits, resource quotas, and auto-scaling based on resource utilization. |
+| Community Support    | Large community with extensive documentation and support resources. | Active open-source community with continuous development and contributions from various organizations. |
+| Use Cases            | Ideal for development and testing environments, single-host deployments, and small-scale applications. | Suitable for deploying and managing production-grade, distributed applications at scale across multiple hosts or cloud environments. |

@@ -22,7 +22,7 @@ spec:
     spec:
       containers:
       - name: uploadapp
-        image: jpalaparthi/hitachi_upload_app
+        image: jpalaparthi/hitachi_upload_app:v02
         ports:
         - containerPort: 8081
           name: web

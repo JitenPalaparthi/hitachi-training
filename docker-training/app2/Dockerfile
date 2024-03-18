@@ -25,7 +25,7 @@ WORKDIR /root/
 COPY --from=builder /app/service .
 
 # Expose port 8080 to the outside world
-EXPOSE 8080
+RUN mkdir uploads
 
 ARG PORT
 

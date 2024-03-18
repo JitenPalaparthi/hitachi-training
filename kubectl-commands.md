@@ -27,3 +27,8 @@ kubectl get nodes -o wide
 ```
 kubectl label nodes minikube-m03 workload=dev colour=yellow
 ```
+
+
+
+
+https://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@github.com/JitenPalaparthi/hitachi-training.git

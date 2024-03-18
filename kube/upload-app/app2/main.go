@@ -53,6 +53,9 @@ func uploadFile(w http.ResponseWriter, r *http.Request) {
 
 func setupRoutes(port string) {
 	http.HandleFunc("/upload", uploadFile)
+	http.HandleFunc("/ping", func(w http.ResponseWriter, r *http.Request) {
+		fmt.Fprintln(w, "pong")
+	})
 	http.ListenAndServe(":"+port, nil)
 }
 

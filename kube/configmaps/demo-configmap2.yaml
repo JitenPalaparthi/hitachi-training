@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: demo-configmap2
+  namespace: dev
+data:
+  APP_PORT: "8081"
+  APP_TYPE: "Demo"
+  APP_NAME: "Busybox demo app"
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: example-pod2
+  namespace: dev
+spec:
+  restartPolicy: Never
+  containers:
+    - name: example-container2
+      image: busybox
+      command: ['sh','-c','env']
+      envFrom:
+        - configMapRef:
+            name: demo-config2
+     

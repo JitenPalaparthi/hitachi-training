@@ -1,0 +1,1 @@
+kubectl create configmap demo-config4 -n dev --from-file=kube/demo-nginx-replicaset.yaml

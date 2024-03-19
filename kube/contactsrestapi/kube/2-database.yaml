@@ -1,0 +1,88 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: app
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: dbconfig
+  namespace: app
+data:
+  POSTGRES_USER: app
+  POSTGRES_DB: contactsdb
+  DB_CONNECTION: "host=postgresdb-service user=app password=app@123 dbname=contactsdb port=5432 sslmode=disable TimeZone=Asia/Shanghai"
+  PORT: ":8082"
+---
+apiVersion: v1
+kind: Secret
+metadata:
+  name: dbsecret
+  namespace: app
+type: Opaque
+data:
+  POSTGRES_PASSWORD: YXBwQDEyMwo=
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: pvc-storage
+  namespace: app
+spec:
+  resources:
+    requests:
+      storage:  1Gi
+  volumeMode: Filesystem
+  accessModes:
+    - ReadWriteMany
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: postgresdb
+  namespace: app
+  labels:
+    db: postgres
+spec:
+  containers:
+  - name: postgredb
+    image: postgres
+    env:
+    - name: POSTGRES_USER
+      valueFrom:
+        configMapKeyRef:
+          name: dbconfig
+          key: POSTGRES_USER   
+    - name: POSTGRES_PASSWORD
+      valueFrom:
+        secretKeyRef:
+          name: dbsecret
+          key: POSTGRES_PASSWORD
+    - name: POSTGRES_DB
+      valueFrom:
+        configMapKeyRef:
+          name: dbconfig
+          key: POSTGRES_DB   
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+    ports:
+      - containerPort: 5432
+  # volumes:
+  #   - name: database-volume
+  #     persistentVolumeClaim:
+  #       claimName: pvc-storage
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: postgresdb-service
+  namespace: app
+spec:
+  type: ClusterIP
+  selector:
+    db: postgres
+  ports:
+  - port: 5432
+    targetPort: 5432

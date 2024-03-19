@@ -1,0 +1,32 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: demo-config3
+  namespace: dev
+data:
+  config.json: |
+    {
+        "demo": "yes"
+        "what":"configMap"
+        "why":"todemonstrate"
+        "how":"through config file"
+    }
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: example-pod3
+  namespace: dev
+spec:
+  containers:
+  - name: example-container3
+    image: nginx
+    volumeMounts:
+    - name: config-volume
+      mountPath: /etc/config
+  volumes:
+  - name: config-volume
+    configMap:
+      name: demo-config3
+
+# kubectl exec example-pod3 -- cat /etc/config/config.json -n dev

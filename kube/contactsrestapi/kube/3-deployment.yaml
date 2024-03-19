@@ -1,0 +1,45 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: contactsapp
+  namespace: app
+  labels:
+    app: contactsapp
+spec:
+  containers:
+  - name: contactsapp #name of a container
+    image: jpalaparthi/hitachi-contactsapp:v01
+    resources:
+      limits:
+        memory: "128Mi"
+        cpu: "500m"
+      requests: 
+        memory: "64Mi"
+        cpu: "200m"
+    env:
+    - name: DB_CONNECTION
+      valueFrom:
+        configMapKeyRef:
+          name: dbconfig
+          key: DB_CONNECTION  
+    - name: PORT
+      valueFrom:
+        configMapKeyRef:
+          name: dbconfig
+          key: PORT 
+    ports:
+      - containerPort: 8082
+        hostPort: 8082
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: contactsapp-service
+  namespace: app
+spec:
+  type: LoadBalancer
+  selector:
+    app: contactsapp
+  ports:
+  - port: 8082
+    targetPort: 8082

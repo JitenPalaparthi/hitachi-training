@@ -1,0 +1,34 @@
+# when file is stored in the configmap, the file name is key the and the content of the file is the value
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: demo-configmap4
+  namespace: dev
+data:
+  config.json: |
+    {
+      "app_name":"demo busybox app",
+      "app_port":"8081",
+      "app_type":"test"
+    }
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: example-pod4
+  namespace: dev
+spec:
+  restartPolicy: Never
+  containers:
+    - name: example-container4
+      image: busybox
+      command: ['sh','-c','env']
+      envFrom:
+        - configMapRef:
+            name: demo-configmap4
+     

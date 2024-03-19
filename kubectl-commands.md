@@ -38,3 +38,15 @@ kubectl port-forward service/uploadapp-service 8082:8081 -n dev
 ```
 kubectl port-forward pod/uploadapp-service-abcd-234 8082:8081 -n dev
 ```
+
+- create a configmap using command
+
+```
+kubectl create configmap demo-confgmap5 --from-file=configmap-file.json -n dev
+```
+
+- create a configmap using keys and values
+
+```
+kubectl create configmap demo-configmap6 -n dev --from-literal=NAME=Hitachi --from-literal=TRAINING=Devops
+```

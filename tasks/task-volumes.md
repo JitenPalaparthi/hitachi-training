@@ -1,0 +1,4 @@
+- Take upload_app/app2 application
+- Build a docker image of your own 
+- use various volume types --> hostPath, PersistentVolumeClaim etc and deploy the kubeernates manifest files.
+- Observe how things works

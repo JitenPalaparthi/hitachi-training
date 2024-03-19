@@ -20,7 +20,7 @@ spec:
   containers:
     - name: example-container1
       image: busybox
-      command: ['sh', "-c",'echo','The app port is $APP_PORT']
+      command: ['sh', '-c','echo The app port is $APP_PORT']
       env:
       - name: APP_PORT
         #value: "8081"

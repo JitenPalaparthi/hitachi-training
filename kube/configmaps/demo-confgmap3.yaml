@@ -1,0 +1,36 @@
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: dev
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: demo-configmap3
+  namespace: dev
+data:
+  config.json: |
+    {
+      "app_name":"demo busybox app",
+      "app_port":"8081",
+      "app_type":"test"
+    }
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: example-pod3
+  namespace: dev
+spec:
+  restartPolicy: Always
+  containers:
+    - name: example-container3
+      image: nginx
+      volumeMounts:
+        - name:  configmap-volume
+          mountPath:  /etc/config
+  volumes:
+  - name : configmap-volume
+    configMap:
+      name: demo-configmap3
+     

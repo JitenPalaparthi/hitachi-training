@@ -26,5 +26,5 @@ spec:
       command: ['sh','-c','env']
       envFrom:
         - configMapRef:
-            name: demo-config2
+            name: demo-configmap2
      

@@ -17,6 +17,7 @@ metadata:
   name: example-pod1
   namespace: dev
 spec:
+  restartPolicy: Never
   containers:
     - name: example-container1
       image: busybox

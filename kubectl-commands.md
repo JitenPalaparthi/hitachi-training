@@ -28,7 +28,13 @@ kubectl get nodes -o wide
 kubectl label nodes minikube-m03 workload=dev colour=yellow
 ```
 
+- kubectl port-forward service
 
+```
+kubectl port-forward service/uploadapp-service 8082:8081 -n dev
+```
+- kubectl port-forward pod
 
-
-https://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@github.com/JitenPalaparthi/hitachi-training.git
+```
+kubectl port-forward pod/uploadapp-service-abcd-234 8082:8081 -n dev
+```
